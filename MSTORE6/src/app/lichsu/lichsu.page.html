@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center!important;">
+      Lịch sử giao dịch
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <table style="width: 100%!important; margin-top: 10px;">
+    <tr>
+      <td style="width: 100px!important; text-align: right; border-bottom: solid 1px #dedede;">
+        Từ ngày:
+      </td>
+      <td style="padding-top: 2px; border-bottom: solid 1px #dedede;">
+        <ion-datetime displayFormat="DD/MM/YYYY" min="2015-01-01" max="2025-12-31" [(ngModel)]="tuNgay">
+        </ion-datetime>
+      </td>
+      <td style="width: 40px!important; text-align: right; border-bottom: solid 1px #dedede;">
+        Đến:
+      </td>
+      <td style="padding-top: 2px; border-bottom: solid 1px #dedede;">
+        <ion-datetime displayFormat="DD/MM/YYYY" min="2015-01-01" max="2025-12-31" [(ngModel)]="denNgay">
+        </ion-datetime>
+      </td>
+      <td style="width: 40px!important; font-size: 25px; text-align:center; padding-top: 4px; border-bottom: solid 1px #dedede; color: blue;">
+        <ion-icon name="search"></ion-icon>
+      </td>
+    </tr>
+  </table>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <table style="width: 100%!important;">
+      <tr>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click) = "openTrangChu()" name="basket" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+          <br>
+          <span (click) = "openTrangChu()" style="font-size: 14px!important;color: blue!important;">Trang chủ</span>
+        </td>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click) = "openKhoHang()" name="podium" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+          <br>
+          <span (click) = "openKhoHang()" style="font-size: 14px!important;color: blue!important;">Kho hàng</span>
+        </td>
+        <td style="width: 25%!important; text-align: center;">
+            <ion-icon (click)="openLichSu()" name="logo-buffer" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+            <br>
+            <span (click)="openLichSu()" style="font-size: 14px!important;color: blue!important;">Lịch sử</span>
+          </td>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click) = "openTaiKhoan()" name="person" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+          <br>
+          <span (click) = "openTaiKhoan()" style="font-size: 14px!important;color: blue!important;">Tài khoản</span>
+        </td>
+      </tr>
+    </table>
+  </ion-toolbar>
+</ion-footer>

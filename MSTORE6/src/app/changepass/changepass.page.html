@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center!important;font-size: 16px">
+      CẬP NHẬT MẬT KHẨU
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding >
+  <p style="text-align: center!important; margin-bottom:30px!important;">
+    <img src="../../assets/images/mobifone_logo.png" style="width:50%;">
+  </p>
+  <ion-item style="margin-top: 90px">
+    <ion-icon item-left name="lock" ></ion-icon>
+    <ion-input type="password"  [(ngModel)]="passWordOld" style="margin-left: 10px;margin-top: 15px" placeholder="Nhập mật khẩu hiện tại"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon item-left name="lock"></ion-icon>
+    <ion-input type="password"   [(ngModel)]="passWordNew" style="margin-left: 10px;margin-top: 15px" placeholder="Mật khẩu mới"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon item-left name="lock" ></ion-icon>
+    <ion-input type="password" [(ngModel)]="passWordNew1" style="margin-left: 10px;margin-top: 15px" placeholder="Nhập lại mật khẩu mới"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="save()" color="primary" style="margin-top: 20px; margin-bottom: 5px">Xác nhận thay đổi</ion-button>
+  <ion-button expand="block" (click)="backhome()" color="danger">Hủy</ion-button>
+
+</ion-content>

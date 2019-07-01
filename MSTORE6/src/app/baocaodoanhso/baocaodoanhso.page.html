@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-item lines="none"
+        style="--padding-start: 10px!important;   --padding-end:0px!important;--padding-top:0px!important;  border: 1px solid 	#3880ff;"
+        color="primary">
+        <ion-icon (click)="openHome()" name="arrow-round-back"></ion-icon>
+      </ion-item>
+    </ion-buttons>
+
+    <ion-title style="text-align: center!important;font-size: 16px">
+      BÁO CÁO DOANH SỐ
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-item (click)="openDoanhSo()" lines="none"
+        style="--padding-end:0px!important;--padding-top:0px!important;--background:#3880ff;border: 1px solid 	#3880ff;--color:#ffffff;">
+        <ion-icon name="calendar" style="color:#ffffff;"></ion-icon>
+      </ion-item>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+<ion-header>
+ <ion-toolbar >
+  <div style="background-color:#f9f9fa!important;">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3" text-left style="--ion-grid-column-padding:0px!important;">
+          <div
+            style="padding:8px!important; padding-left:10px!important; color:#000000!important; font-weight:bold!important;">
+            Gói cước</div>
+        </ion-col>
+        <ion-col size="3" text-left style="--ion-grid-column-padding:0px!important;">
+          <div
+            style="padding:8px!important; padding-left:10px!important; color:#000000!important; font-weight:bold!important;">
+            Số lượng</div>
+        </ion-col>
+        <ion-col size="3" text-left style="--ion-grid-column-padding:0px!important;">
+          <div
+            style="padding:8px!important; padding-left:10px!important; color:#000000!important; font-weight:bold!important;">
+            Ngày tháng</div>
+        </ion-col>
+        <ion-col size="3" text-right style="--ion-grid-column-padding:0px!important;">
+          <div
+            style="padding:8px!important; padding-right:10px!important; color:#000000!important; font-weight:bold!important;">
+            Tổng tiền</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+  <div style="background-color:#fff!important;">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3" text-left style="--ion-grid-column-padding:0px!important;text-align: center">
+          <div
+            style="padding:8px!important; padding-left:10px!important; text-align: center ;color:#000000!important; ">
+            Gói cước CB5</div>
+        </ion-col>
+        <ion-col size="3" text-left style="--ion-grid-column-padding:0px!important; text-align: center">
+          <div style="padding:8px!important; padding-left:10px!important; color:#000000!important;text-align: center ">
+            20</div>
+        </ion-col>
+        <ion-col size="3" text-left style="--ion-grid-column-padding:0px!important;text-align: center">
+          <div style="padding:8px!important; padding-left:10px!important; color:#000000!important; text-align: center">
+            01/06/2018</div>
+        </ion-col>
+        <ion-col size="3" text-right style="--ion-grid-column-padding:0px!important;text-align: center">
+          <div style="padding:8px!important; padding-right:10px!important; color:#000000!important; text-align: center">
+            1,500,000</div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="3" text-left style="--ion-grid-column-padding:0px!important;text-align: center">
+          <div
+            style="padding:8px!important; padding-left:10px!important; text-align: center ;color:#000000!important; ">
+            Gói cước K90</div>
+        </ion-col>
+        <ion-col size="3" text-left style="--ion-grid-column-padding:0px!important; text-align: center">
+          <div style="padding:8px!important; padding-left:10px!important; color:#000000!important;text-align: center ">
+            20</div>
+        </ion-col>
+        <ion-col size="3" text-left style="--ion-grid-column-padding:0px!important;text-align: center">
+          <div style="padding:8px!important; padding-left:10px!important; color:#000000!important; text-align: center">
+            01/06/2018</div>
+        </ion-col>
+        <ion-col size="3" text-right style="--ion-grid-column-padding:0px!important;text-align: center">
+          <div style="padding:8px!important; padding-right:10px!important; color:#000000!important; text-align: center">
+            1,500,000</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<ion-footer>
+    <ion-toolbar style="--background:#3880ff!important;--color:#ffffff!important;">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" text-left>
+            <div style="font-size: 16px!important; padding-top:5px!important;">
+              {{this.tuNgay}} - {{this.denNgay}}
+            </div>
+          </ion-col>
+          <ion-col size="6" text-right>
+            <div style="font-size: 18px!important; font-weight:bold!important;">
+              <img src="../assets/images/Sum.png" style="margin-bottom:-5px!important;">&nbsp;{{totalMoney|number:0}}
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-toolbar>
+  </ion-footer>

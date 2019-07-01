@@ -1,0 +1,43 @@
+
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-item lines="none"
+          style="--padding-start: 10px!important;   --padding-end:0px!important;--padding-top:0px!important;  border: 1px solid 	#3880ff;"
+          color="primary"  >
+          <ion-icon (click)="openHome()" name="arrow-round-back"></ion-icon>
+        </ion-item>
+      </ion-buttons>
+  
+      <ion-title style="text-align: center!important;font-size: 16px">
+        BÁO CÁO DOANH SỐ
+      </ion-title>
+  
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content text-center>
+  
+    <br>
+    <p text-center><b>THÔNG TIN BÁO CÁO</b></p>
+  
+    <ion-item>
+      <ion-label position>
+        <ion-icon name="calendar"></ion-icon> Từ ngày
+      </ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" min="2015-01-01" max="2025-12-31" [(ngModel)]="tuNgay"></ion-datetime>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position>
+        <ion-icon name="calendar"></ion-icon> Đến ngày
+      </ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" min="2015-01-01" max="2025-12-31" [(ngModel)]="denNgay"></ion-datetime>
+    </ion-item>
+  
+    <br>
+    <div style="padding:15px!important;">
+      <ion-button expand="block" (click)="getData()" style="--background:#3880ff!important;">Xem báo cáo</ion-button>
+    </div>
+  
+  </ion-content>

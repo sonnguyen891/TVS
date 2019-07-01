@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- saved from url=(0162)https://tpc.googlesyndication.com/sadbundle/$csp%3Der3$/9193743301386563271/300x250/300x250.html#t=4887008234464091129&p=https%3A%2F%2Fgoogleads.g.doubleclick.net -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./f.txt" type="text/javascript"></script><script src="./f(1).txt" type="text/javascript"></script><meta content="width=300,height=250" name="ad.size"><title>300x250</title><script src="./easeljs-0.8.1.min.js.tải xuống"></script><script src="./tweenjs-0.6.1.min.js.tải xuống"></script><script src="./movieclip-0.8.1.min.js.tải xuống"></script><script src="./preloadjs-0.6.1.min.js.tải xuống"></script><script src="./300x250.js.tải xuống"></script><script>
+var canvas, stage, exportRoot;
+
+function init() {
+	canvas = document.getElementById("canvas");
+	images = images||{};
+
+	var loader = new createjs.LoadQueue(false);
+	loader.addEventListener("fileload", handleFileLoad);
+	loader.addEventListener("complete", handleComplete);
+	loader.loadManifest(lib.properties.manifest);
+}
+
+function handleFileLoad(evt) {
+	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+}
+
+function handleComplete(evt) {
+	exportRoot = new lib._300x250();
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+}
+</script><script type="text/javascript" src="./aXEISxcRnEsYuUpnl4wlPe26T7e5UT7L2296c417IJo.js.tải xuống"></script></head><body onclick="ExitApi.exit();" onload="init();" style="background-color:#D4D4D4;margin:0;; cursor:pointer">
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<canvas height="250" id="canvas" style="background-color:#FFFFFF" width="300"></canvas>
+
+</body></html>

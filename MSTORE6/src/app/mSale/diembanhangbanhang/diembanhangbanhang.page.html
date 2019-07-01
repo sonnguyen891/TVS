@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-buttons slot="start">
+      <ion-item lines="none"
+        style="--padding-start: 10px!important; --padding-end:0px!important;--padding-top:0px!important;--border-width:0px!important;"
+        color="success">
+        <ion-icon (click)="diemBanHangChiTiet(this.posCareId)" name="arrow-round-back"></ion-icon>
+      </ion-item>
+    </ion-buttons>
+    <ion-title>
+      Kho hàng - Bán hàng
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header>
+  <ion-searchbar placeholder="Tìm kiếm hàng hóa" [(ngModel)]="queryText" (ionInput)="filterHangHoa($event)" clearInput>
+  </ion-searchbar>
+</ion-header>
+
+<ion-content padding style="padding-top: -10px!important;">
+
+  <ion-list style="margin-top: -15px!important; margin-bottom: -10px!important;">
+    <ion-item *ngFor="let item of danhSachHangHoa"
+      style="--padding-start:0px!important; --padding-top:15px!important; --inner-padding-end:0px!important; --inner-padding-bottom:10px!important;">
+
+      <ion-grid style="--ion-grid-padding:0px!important;">
+
+        <ion-row>
+          <ion-col size="2" style="--ion-grid-column-padding:0px!important;">
+            <img src="../assets/images/icon-sim.png" style="width: 64px!important; border-radius: 0px;">
+          </ion-col>
+          <ion-col size="8" style="--ion-grid-column-padding:0px!important;">
+            <div style="padding-bottom:5px!important; font-weight: bold; font-size: 18px!important;">
+              {{item.category_name}}
+            </div>
+            <div style="padding-bottom:5px!important; padding-top:3px!important;">
+              {{item.product_name}}
+            </div>
+          </ion-col>
+          <ion-col size="2" style="--ion-grid-column-padding:0px!important; text-align:right;">
+            0/100
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <table style="width: 100%!important;">
+      <tr>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click)="openTrangChu()" name="basket" style="font-size: 20px!important;color: blue!important;"></ion-icon>
+          <br>
+          <span (click)="openTrangChu()" style="font-size: 12px!important;color: blue!important;">Bán hàng</span>
+        </td>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click)="openKhoHang()" name="podium" style="font-size: 20px!important;"></ion-icon>
+          <br>
+          <span (click)="openKhoHang()" style="font-size: 12px!important;">Kho hàng</span>
+        </td>
+        <td style="width: 25%!important; text-align: center;">
+            <ion-icon (click)="openLichSu()" name="logo-buffer" style="font-size: 20px!important;"></ion-icon>
+            <br>
+            <span (click)="openLichSu()" style="font-size: 12px!important;">Lịch sử</span>
+          </td>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click) = "openTaiKhoan()" name="person" style="font-size: 20px!important;"></ion-icon>
+          <br>
+          <span (click) = "openTaiKhoan()" style="font-size: 12px!important;">Tài khoản</span>
+        </td>
+      </tr>
+    </table>
+  </ion-toolbar>
+</ion-footer>

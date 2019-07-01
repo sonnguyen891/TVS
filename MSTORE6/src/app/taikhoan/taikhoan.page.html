@@ -1,0 +1,123 @@
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-item lines="none"
+        style="--padding-start: 10px!important;   --padding-end:0px!important;--padding-top:0px!important;  border: 1px solid 	#3880ff;"
+        color="primary"  >
+        <ion-icon (click)="openHome()" name="arrow-round-back"></ion-icon>
+      </ion-item>
+    </ion-buttons>
+
+    <ion-title style="text-align: center!important;font-size: 16px">
+      TÀI KHOẢN
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-item lines="none"
+        style="--padding-start: 10px!important; --padding-end:0px!important;--padding-top:0px!important;--border-width:0px!important;  border: 1px solid 	#3880ff;"
+        color="primary">
+        <ion-icon name="notifications-outline"></ion-icon>
+      </ion-item>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <p style="text-align: center!important; margin-bottom:30px!important;">
+        <img src="../../assets/images/mobifone_logo.png" style="width:50%;">
+      </p>
+  <div style="height: 150px; background-color: #fff; margin-top: 10px">
+    <ion-grid>
+      <ion-row>
+        <ion-col style="text-align:center; padding-top: 0px;">
+          <img src="../assets/images/Avatar.png">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col style="text-align:center; margin-top: -20px">
+              <p style="color: blue; font-weight:bold">NGUYỄN VĂN KHOA</p>
+            </ion-col>
+        </ion-row>
+    </ion-grid >
+  </div>
+
+  <div padding>
+    <ion-grid style="text-align:center; padding-top: 0px;">
+      <ion-row>
+        <ion-col style="width: 50%; text-align:justify; background-color: #fff; color:blue; padding: 6px; padding-left: 3px;
+              border-right: solid 1px #fff;  padding-left: 10px; border-bottom: solid 1px #fff; font-weight: bold">
+          Mã thành viên:
+        </ion-col>
+        <ion-col
+          style="width: 50%; text-align:right; background-color: #fff; color: blue; padding: 6px; padding-left: 3px; border-bottom: solid 1px #fff;" >
+          180001
+        </ion-col>
+      </ion-row>
+     
+      <ion-row>
+        <ion-col style="width: 50%; text-align:justify; background-color: #fff; color:blue; padding: 6px; padding-left: 3px;
+                    border-right: solid 1px #fff;  padding-left: 10px; border-bottom: solid 1px #fff;font-weight: bold">
+          Số điện thoại:
+        </ion-col>
+        <ion-col
+          style="width: 50%; text-align:right; background-color: #fff; color: blue; padding: 6px; padding-left: 3px; border-bottom: solid 1px #fff;">
+          0987456654
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="width: 50%; text-align:justify; background-color: #fff; color: blue; padding: 6px; padding-left: 3px;
+                        border-right: solid 1px #fff;  padding-left: 10px; border-bottom: solid 1px #fff;font-weight: bold">
+          Địa chỉ:
+        </ion-col>
+        <ion-col
+          style="width: 50%; text-align:right; background-color: #fff; color:blue; padding: 6px; padding-left: 3px; border-bottom: solid 1px #fff;">
+          Thành phố Vinh
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col style="width: 50%; text-align:justify; background-color: #fff; color: blue; padding: 6px; padding-left: 3px;
+                            border-right: solid 1px #fff;  padding-left: 10px; border-bottom: solid 1px #fff;font-weight: bold">
+          Email:
+        </ion-col>
+        <ion-col
+          style="width: 50%; text-align:right; background-color: #fff; color: blue; padding: 6px; padding-left: 3px; border-bottom: solid 1px #fff;">
+          khoa@gmail.com
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button expand="block" (click)="changepass()" color="danger">Đổi mật khẩu</ion-button>
+    <ion-button style="color: primary" expand="block" (click)="logOut()">Đăng xuất</ion-button>
+
+  </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <table style="width: 100%!important;">
+      <tr>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click) = "openTrangChu()" name="basket" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+          <br>
+          <span (click) = "openTrangChu()" style="font-size: 14px!important;color: blue!important;">Trang chủ</span>
+        </td>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click) = "openKhoHang()" name="podium" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+          <br>
+          <span (click) = "openKhoHang()" style="font-size: 14px!important;color: blue!important;">Kho hàng</span>
+        </td>
+        <td style="width: 25%!important; text-align: center;">
+            <ion-icon (click)="openLichSu()" name="logo-buffer" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+            <br>
+            <span (click)="openLichSu()" style="font-size: 14px!important;color: blue!important;">Lịch sử</span>
+          </td>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click) = "openTaiKhoan()" name="person" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+          <br>
+          <span (click) = "openTaiKhoan()" style="font-size: 14px!important;color: blue!important;">Tài khoản</span>
+        </td>
+      </tr>
+    </table>
+  </ion-toolbar>
+</ion-footer>

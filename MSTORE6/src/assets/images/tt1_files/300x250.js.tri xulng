@@ -1,0 +1,79 @@
+(function (lib, img, cjs, ss) {
+
+var p; // shortcut to reference prototypes
+lib.webFontTxtFilters = {}; 
+
+// library properties:
+lib.properties = {
+	width: 300,
+	height: 250,
+	fps: 24,
+	color: "#FFFFFF",
+	webfonts: {},
+	manifest: [
+		{src:"images/BG1.jpg", id:"BG1"},
+		{src:"images/BG2.jpg", id:"BG2"}
+	]
+};
+
+
+
+lib.webfontAvailable = function(family) { 
+	lib.properties.webfonts[family] = true;
+	var txtFilters = lib.webFontTxtFilters && lib.webFontTxtFilters[family] || [];
+	for(var f = 0; f < txtFilters.length; ++f) {
+		txtFilters[f].updateCache();
+	}
+};
+// symbols:
+
+
+
+(lib.BG1 = function() {
+	this.initialize(img.BG1);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,336,280);
+
+
+(lib.BG2 = function() {
+	this.initialize(img.BG2);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,336,280);
+
+
+// stage content:
+(lib._300x250 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// BG2 copy
+	this.instance = new lib.BG2();
+	this.instance.setTransform(0,0,0.893,0.893);
+	this.instance._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(60).to({_off:false},0).wait(141));
+
+	// BG1 copy
+	this.instance_1 = new lib.BG1();
+	this.instance_1.setTransform(0,0,0.893,0.893);
+	this.instance_1._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(40).to({_off:false},0).to({_off:true},20).wait(141));
+
+	// BG2
+	this.instance_2 = new lib.BG2();
+	this.instance_2.setTransform(0,0,0.893,0.893);
+	this.instance_2._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(20).to({_off:false},0).to({_off:true},20).wait(161));
+
+	// BG1
+	this.instance_3 = new lib.BG1();
+	this.instance_3.setTransform(0,0,0.893,0.893);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).to({_off:true},20).wait(181));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(150,125,300,250);
+
+})(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{});
+var lib, images, createjs, ss;

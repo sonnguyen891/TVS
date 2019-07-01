@@ -1,0 +1,38 @@
+<ion-content padding>
+
+  <p style="text-align: center!important; margin-bottom:30px!important;">
+    <img src="../../assets/images/mobifone_logo.png" style="width:50%;">
+  </p>
+
+  <div style="padding: 10px!important; border-radius: 5px; text-align: center!important; display:block; background-color: #ffffff!important;">
+    <p style="font-weight: bold; color: blue">
+      ĐĂNG NHẬP HỆ THỐNG
+    </p>
+
+    <ion-item style="--padding-start:0px!important;">
+      <ion-icon item-left name="person"></ion-icon>
+      <ion-input type="text" [(ngModel)]="userName" style="--padding-start:10px!important;" placeholder="Tài khoản">
+      </ion-input>
+    </ion-item>
+
+    <ion-item style="--padding-start:0px!important;">
+      <ion-icon item-left name="lock"></ion-icon>
+      <ion-input type="password" [(ngModel)]="passWord" style="--padding-start:10px!important;" placeholder="Mật khẩu">
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none"
+      style="--padding-start:0px!important; margin-top:30px!important; margin-bottom:30px!important;">
+      <ion-checkbox color="success" [(ngModel)]="remember" checked="true"></ion-checkbox> &nbsp;Ghi nhớ mật khẩu
+    </ion-item>
+
+    <ion-button expand="block" (click)="watting()" color="danger">Đăng nhập</ion-button>
+    <ion-button style="color: blue;" expand="block" color="white" (click)="forgetpass()">Quên mật khẩu ?</ion-button>
+    <ion-button expand="block" (click)="registration()" color="primary">Đăng ký</ion-button>
+    <p style="text-align: center; padding-top:10px!important;">
+      Version 27052019
+    </p>
+
+  </div>
+
+</ion-content>

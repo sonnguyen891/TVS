@@ -1,0 +1,94 @@
+<ion-header>
+  <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+          <ion-item lines="none"
+            style="--padding-start: 10px!important;   --padding-end:0px!important;--padding-top:0px!important;  border: 1px solid 	#3880ff;"
+            color="primary">
+            <ion-icon (click)="openHome()" name="arrow-round-back"></ion-icon>
+          </ion-item>
+        </ion-buttons>
+    <ion-title style="text-align: center!important;font-size: 14px">
+      TRA CỨU GÓI VAS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-header>
+  <ion-item>
+    <ion-input style="margin-left: 0px; " placeholder="Nhập số thuê bao khách hàng"></ion-input>
+    <ion-icon name="search"></ion-icon>
+  </ion-item>
+</ion-header>
+<ion-item style="margin-top: 15px;">
+  <ion-tabs>
+
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button style="color: white; ">
+        <ion-label (click)="openGoicuoc()" style="font-weight:bold; font-size:16px; color: blue">Gói cước</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button style="color: white;background-color: blue">
+        <ion-label (click)="openGoicuocdangsd()" style="font-weight:bold; font-size:16px">TT gói cước</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button style="color: blue">
+        <ion-label (click)="openGoicuocdoanhthu()" style="font-weight:bold; font-size:16px">TT doanh thu</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-item>
+<ion-content padding>
+
+
+  <div>
+    <ion-grid style="text-align:center; padding-top: 0px;">
+      <ion-row>
+        <ion-col size="3" style="font-weight:bold; font-size: 16px">
+          Gói cước
+        </ion-col>
+        <ion-col size="5" style="font-weight:bold;font-size: 16px">
+          Ngày đăng ký
+        </ion-col>
+        <ion-col size="4" style="font-weight:bold;font-size: 16px">
+          Ngày hết hạn
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="3">
+          Gói cước M79
+        </ion-col>
+        <ion-col size="5">
+          20/06/2019
+        </ion-col>
+        <ion-col size="4">
+          20/06/2019
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3">
+          Gói cước M79
+        </ion-col>
+        <ion-col size="5">
+          20/06/2019
+        </ion-col>
+        <ion-col size="4">
+          20/06/2019
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3">
+          Gói cước M79
+        </ion-col>
+        <ion-col size="5">
+          20/06/2019
+        </ion-col>
+        <ion-col size="4">
+          20/06/2019
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+
+  </div>
+</ion-content>

@@ -1,0 +1,13 @@
+
+<ion-content padding>
+  <p style="text-align: center!important; margin-bottom:30px!important;">
+    <img src="../../assets/images/mobifone_logo.png" style="width:50%;">
+  </p>
+<p style="text-align:center; color: blue" >Vui lòng nhập tên tài khoản đã đăng ký</p>
+<ion-item style="margin-bottom: 20px; margin-top: 30px">
+  <ion-input  type="text"  [(ngModel)]="useraccount" placeholder="Nhập tên đăng nhập đã đăng ký"></ion-input>
+</ion-item>
+  <ion-button color="primary" (click)="getpass()" expand="block">Gửi</ion-button>
+  <ion-button color="danger" (click)="backlogin()" expand="block">Trở về trang đăng nhập</ion-button>
+
+</ion-content>

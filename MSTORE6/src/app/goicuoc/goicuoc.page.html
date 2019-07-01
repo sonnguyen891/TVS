@@ -1,0 +1,242 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <ion-buttons slot="start">
+      <ion-item lines="none"
+        style="--padding-start: 10px!important;   --padding-end:0px!important;--padding-top:0px!important;  border: 1px solid 	#3880ff;"
+        color="primary">
+        <ion-icon (click)="openHome()" name="arrow-round-back"></ion-icon>
+      </ion-item>
+    </ion-buttons>
+    <ion-title style="text-align: center!important;font-size: 14px">
+      TRA CỨU GÓI VAS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-header>
+  <ion-item>
+    <ion-input  style="margin-left: 0px; " placeholder="Nhập số thuê bao khách hàng"></ion-input>
+    <ion-icon name="search"></ion-icon>
+  </ion-item>
+</ion-header>
+<ion-item style="margin-top: 15px;">
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button style="color: blue; background-color: blue">
+        <ion-label (click)="openGoicuoc()" style="font-weight:bold; font-size:16px; color: white">Gói cước</ion-label>
+      </ion-tab-button>
+      <ion-tab-button style="color: blue">
+        <ion-label (click)="openGoicuocdangsd()" style="font-weight:bold; font-size:16px">TT gói cước</ion-label>
+      </ion-tab-button>
+      <ion-tab-button style="color: blue">
+        <ion-label (click)="openGoicuocdoanhthu()"  style="font-weight:bold; font-size:16px">TT doanh thu</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-item>
+<ion-item lines="none" >
+  <ion-label padding
+    style="background-color:#fff; height: 50px; color:blue; font-size: 16px; text-align: center; font-weight: bold;  "
+    (click)="openGoichung()" [style.background-color]="colorchung" [style.color]="fontchung">
+    Chung
+  </ion-label>
+  <ion-label padding
+    style="background-color:#fff; height: 50px; color: blue; font-size: 16px; text-align: center;font-weight: bold"
+    (click)="openCombo()" [style.background-color]="colorcombo" [style.color]="fontcombo">
+    Combo
+  </ion-label>
+  <ion-label padding
+    style="background-color:#fff; height: 50px; color: blue; font-size: 16px; text-align: center;font-weight: bold"
+    (click)="openFpt()" [style.background-color]="colorfpt" [style.color]="fontfpt">
+    FPT
+  </ion-label>
+</ion-item>
+<ion-item style="margin-bottom: -20x">
+  <ion-label padding
+    style="background-color:#fff; height: 50px; color: blue; font-size: 16px; text-align: center;font-weight: bold"
+    (click)="openData()" [style.background-color]="colordata" [style.color]="fontdata">
+    DATA
+  </ion-label>
+  <ion-label padding
+    style="background-color:#fff; height: 50px; color: blue; font-size: 16px; text-align: center;font-weight: bold"
+    (click)="openGtgt()" [style.background-color]="colorgtgt" [style.color]="fontgtgt">
+    GTGT
+  </ion-label>
+  <ion-label padding
+    style="background-color:#fff; height: 50px; color: blue; font-size: 16px; text-align: center;font-weight: bold"
+    (click)="openCkdai()" [style.background-color]="colorckdai" [style.color]="fontckdai">
+    CK DÀI
+  </ion-label>
+
+</ion-item>
+<ion-content padding>
+  <ion-item>
+      <ion-icon name="jet" style="color: red!important;" ></ion-icon>
+    <ion-label style="font-size: 16px; font-weight: bold;color: blue; ">
+      Gói cước CB5
+    </ion-label>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-grid>
+        <ion-row style="font-size: 16px; ">
+          <ion-col style="font-size: 16px; font-weight: bold; margin-top: 50px; width: 50px" size="4">
+            Mô tả
+          </ion-col>
+          <ion-col size="8" style="text-align: left">
+            <ion-row>
+              - Miễn phí 500 phút gọi nội mạng
+            </ion-row>
+            <ion-row>
+              - Miễn phí 50 phút gọi ngoại mạng
+            </ion-row>
+            <ion-row>
+              - Tặng 5GB truy cập internet
+            </ion-row>
+            <ion-row>
+              - Cước phí: 50,000 đồng/1 lần đăng ký
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size: 16px; font-weight: bold; " size="4">
+            Khuyến khích
+          </ion-col>
+          <ion-col style="font-size: 16px;" size="8">
+            10,5000 đ
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size: 16px; font-weight: bold; " size="4">
+            Cú pháp
+          </ion-col>
+          <ion-col style="font-size: 16px;" size="8">
+            CB5 STB gửi tới 909
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size: 16px; font-weight: bold; " size="4">
+          </ion-col>
+          <ion-col style="font-size: 16px;" size="8">
+            <ion-button style="color:danger; " Sexpand="block" (click)="goicuocDangky()">ĐĂNG KÝ</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-item>
+      <ion-icon name="jet" style="color: red!important;" ></ion-icon>
+    <ion-label style="font-size: 16px; font-weight: bold;color: blue">
+      Gói cước K90
+    </ion-label>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-grid>
+        <ion-row style="font-size: 16px; ">
+          <ion-col style="font-size: 16px; font-weight: bold; margin-top: 50px; width: 50px" size="4">
+            Mô tả
+          </ion-col>
+          <ion-col size="8" style="text-align: left">
+            <ion-row>
+              - Miễn phí các cuộc gọi < 10 phút nội mạng </ion-row> <ion-row>
+                - Cuộc gọi >= 10 phút tính theo mức cước hiện hành cho toàn bộ cuộc gọi nội mạng
+            </ion-row>
+            <ion-row>
+              - Thoại liên mạng 90 phút.
+            </ion-row>
+            <ion-row>
+              - Cước phí: 90,000đ/30 ngày.
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size: 16px; font-weight: bold; " size="4">
+            Khuyến khích
+          </ion-col>
+          <ion-col style="font-size: 16px;" size="8">
+            11,818 đ
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size: 16px; font-weight: bold; " size="4">
+            Cú pháp
+          </ion-col>
+          <ion-col style="font-size: 16px;" size="8">
+            K90 STB gửi tới 909
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size: 16px; font-weight: bold; " size="4">
+
+          </ion-col>
+          <ion-col style="font-size: 16px;" size="8">
+            <ion-button style="color: danger; " Sexpand="block" (click)="goicuocDangky()">ĐĂNG KÝ</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+      <ion-icon name="jet" style="color: red!important;" ></ion-icon>
+    <ion-label style="font-size: 16px; font-weight: bold;color: blue">
+      Gói cước M79
+    </ion-label>
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-grid>
+        <ion-row style="font-size: 16px; ">
+          <ion-col style="font-size: 16px; font-weight: bold; margin-top: 50px; width: 50px" size="4">
+            Mô tả
+          </ion-col>
+          <ion-col size="8" style="text-align: left">
+            <ion-row>
+              - Thoại nội mạng: 1000 phút.
+            </ion-row>
+            <ion-row>
+              - Thoại trong nước 20 phút.
+            </ion-row>
+            <ion-row>
+              - Dữ liệu: 4GB.
+            </ion-row>
+            <ion-row>
+              - Đăng ký lần đầu bạn được hưởng 60 ngày sử dụng, các chu kỳ sau còn 30 ngày
+            </ion-row>
+            <ion-row>
+              - Cước phí 79,0000 đồng.
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size: 16px; font-weight: bold; " size="4">
+            Khuyến khích
+          </ion-col>
+          <ion-col style="font-size: 16px;" size="8">
+            25,136 đ.
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size: 16px; font-weight: bold; " size="4">
+            Cú pháp
+          </ion-col>
+          <ion-col style="font-size: 16px;" size="8">
+            M79 STB gửi tới 909
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="font-size: 16px; font-weight: bold; " size="4">
+          </ion-col>
+          <ion-col style="font-size: 16px;" size="8">
+            <ion-button style="color: danger; " Sexpand="block" (click)="goicuocDangky()">ĐĂNG KÝ</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ion-list>
+</ion-content>

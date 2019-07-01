@@ -1,0 +1,97 @@
+
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-item lines="none"
+          style="--padding-start: 10px!important;   --padding-end:0px!important;--padding-top:0px!important;  border: 1px solid 	#3880ff;"
+          color="primary"  >
+          <ion-icon (click)="openHome()" name="arrow-round-back"></ion-icon>
+        </ion-item>
+      </ion-buttons>
+  
+      <ion-title style="text-align: center!important;font-size: 16px">
+          MSTORE6
+      </ion-title>
+  
+      <ion-buttons slot="end">
+        <ion-item lines="none"
+          style="--padding-start: 10px!important; --padding-end:0px!important;--padding-top:0px!important;--border-width:0px!important;  border: 1px solid 	#3880ff;"
+          color="primary">
+          <ion-icon name="notifications-outline"></ion-icon>
+        </ion-item>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+<ion-content>
+    <ion-grid style="margin-top:30px!important;">
+
+        <ion-row padding>
+          <ion-col size="6" text-center>
+            <button (click)="openTracuugoi()" style="background:#ffffff">
+              <img src="../../assets/images/Donbanle.png" style="margin-bottom:5px!important;">
+              <br>
+              <span style="font-size: 14px!important;">Gói dịch vụ</span>
+            </button>
+    
+          </ion-col>
+          <ion-col size="6" text-center>
+    
+            <button (click)="openBangoitt()" style="background:#ffffff">
+              <img src="../../assets/images/Banle.png" style="margin-bottom:5px!important;">
+              <br>
+              <span style="font-size: 14px!important;">Bán gói</span>
+            </button>
+    
+          </ion-col>
+        </ion-row>
+    
+        <ion-row padding>
+          <ion-col size="6" text-center>
+            <button (click)="openDoanhso()" style="background:#ffffff">
+              <img src="../../assets/images/DoanhSo.png" style="margin-bottom:5px!important;">
+              <br>
+              <span style="font-size: 14px!important;">Doanh số</span>
+            </button>
+    
+          </ion-col>
+
+          <ion-col size="6" text-center>
+              <button (click) ="openTintuc()" style="background:#ffffff">
+                  <img src="../../assets/images/SoQuy.png" style="margin-bottom:5px!important;">
+                  <br>
+                  <span style="font-size: 14px!important;">Tin tức</span>
+                </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <table style="width: 100%!important;">
+      <tr>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click) = "openTrangChu()" name="basket" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+          <br>
+          <span (click) = "openTrangChu()" style="font-size: 14px!important;color: blue!important;">Trang chủ</span>
+        </td>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click) = "openKhoHang()" name="podium" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+          <br>
+          <span (click) = "openKhoHang()" style="font-size: 14px!important;color: blue!important;">Kho hàng</span>
+        </td>
+        <td style="width: 25%!important; text-align: center;">
+            <ion-icon (click)="openLichSu()" name="logo-buffer" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+            <br>
+            <span (click)="openLichSu()" style="font-size: 14px!important;color: blue!important;">Lịch sử</span>
+          </td>
+        <td style="width: 25%!important; text-align: center;">
+          <ion-icon (click) = "openTaiKhoan()" name="person" style="font-size: 30px!important;color: blue!important;"></ion-icon>
+          <br>
+          <span (click) = "openTaiKhoan()" style="font-size: 14px!important;color: blue!important;">Tài khoản</span>
+        </td>
+      </tr>
+    </table>
+  </ion-toolbar>
+</ion-footer>

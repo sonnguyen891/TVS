@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-item lines="none"
+        style="--padding-start: 10px!important;   --padding-end:0px!important;--padding-top:0px!important;  border: 1px solid 	#3880ff;"
+        color="primary">
+        <ion-icon (click)="openHome()" name="arrow-round-back"></ion-icon>
+      </ion-item>
+    </ion-buttons>
+
+    <ion-title style="text-align: center!important;font-size: 16px">
+      BÁN GÓI TRỰC TIẾP
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-input style="margin-left: 0px; margin-top: 10px" placeholder="Nhập số thuê bao khách hàng "></ion-input>
+  </ion-item>
+  <ion-list style="margin-top: 15px">
+    <ion-item style="border-right:  1px solid 	#fff;">
+      <ion-label >Mã dịch vụ: </ion-label>
+      <ion-select interface="popover" style="max-width: 65% !important; width: 65% !important;"  placeholder="Chọn dịch vụ">
+        <ion-select-option value="FASTCONNECT">FASTCONNECT</ion-select-option>
+        <ion-select-option value="FPT_PLAY">FPT_PLAY</ion-select-option>
+        <ion-select-option value="GAME_DATA">GAME_DATA</ion-select-option>
+        <ion-select-option value="FUNRINGME">FUNRINGME</ion-select-option>
+        <ion-select-option value="GOI CUOC">GOI CUOC</ion-select-option>
+        <ion-select-option value="FUNRING">FUNRING</ion-select-option>
+        <ion-select-option value="Kenh1">Kenh1</ion-select-option>
+        <ion-select-option value="GOI_CUOC_CTKV6">GOI_CUOC_CTKV6</ion-select-option>
+        <ion-select-option value="GOI_CUOC_CTKV9">GOI_CUOC_CTKV9</ion-select-option>
+        <ion-select-option value="GOI_CUOC_DATA_CTY4">GOI_CUOC_DATA_CTY4</ion-select-option>
+        <ion-select-option value="HOC LIEN">HOC LIEN</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-list style="margin-top: -15px">
+    <ion-item style="border-right:  1px solid 	#fff;">
+      <ion-label>Mã gói cước: </ion-label>
+      <ion-select interface="popover" style="max-width: 65% !important; width: 65% !important;"  placeholder="Chọn gói cước">
+        <ion-select-option value="bacon">F120-F120</ion-select-option>
+        <ion-select-option value="olives">F150-F150</ion-select-option>
+        <ion-select-option value="xcheese">F200-F200</ion-select-option>
+        <ion-select-option value="peppers">F250-F250</ion-select-option>
+        <ion-select-option value="mushrooms">F300-F300</ion-select-option>
+        <ion-select-option value="onions">F500-F500</ion-select-option>
+        <ion-select-option value="pepperoni">F70-F70</ion-select-option>
+        <ion-select-option value="pineapple">F90-F90</ion-select-option>
+        <ion-select-option value="sausage">F500N-F500N</ion-select-option>
+        <ion-select-option value="Spinach">DATA50-DATA50</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="block" (click)="getSMS()"  color="primary">ĐĂNG KÝ</ion-button>
+</ion-content>
