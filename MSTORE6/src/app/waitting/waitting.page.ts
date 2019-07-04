@@ -5,14 +5,16 @@ import { Router } from '@angular/router';
   templateUrl: './waitting.page.html',
   styleUrls: ['./waitting.page.scss'],
 })
-export class WaittingPage implements OnInit {
+export class WaittingPage {
 
-  constructor(public router: Router) { }
-
-  ngOnInit() {
+  constructor(public router: Router) { 
+  
+    this.gotohome();
   }
+
 gotohome()
 {
+  
   this.router.navigateByUrl("trangchu1");
 }
 }

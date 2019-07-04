@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-goicuoc',
   templateUrl: './goicuoc.page.html',
   styleUrls: ['./goicuoc.page.scss'],
 })
-export class GoicuocPage implements OnInit {
+export class GoicuocPage {
  colorchung : string ="#fff";
  colorcombo : string ="#fff";
  colorfpt : string ="#fff";
@@ -20,8 +21,6 @@ export class GoicuocPage implements OnInit {
  fontckdai : string ="blue";
   constructor(public router: Router) { }
 
-  ngOnInit() {
-  }
   openGoicuocdangsd()
   {
     this.router.navigateByUrl("goicuocdangsudung");
@@ -128,4 +127,5 @@ this.fontgtgt="#fff";
 this.fontfpt="blue";
 this.fontckdai="blue";
 }
+
 }

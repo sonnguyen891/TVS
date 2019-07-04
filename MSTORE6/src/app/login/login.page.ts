@@ -39,7 +39,6 @@ export class LoginPage {
     this.userName = "";
     this.passWord ="";
 
-    // var userSessionId: string;
     // this.http.get('https://msale.mobifone.vn:8443/mSales-Login/LoginManagerRS/login?loginStr=QzZfRjE3NTExOjYzMDYzNg==')
     //   .subscribe(data => {
     //     userSessionId = data["LoginOutput"]["userSessionId"];
@@ -71,7 +70,11 @@ watting()
 }
   signin() 
   {
-  var _header = new Headers({'Content-Type':'Application/json','Access-Control-Allow-Origin':'*','Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE'});
+  var _header = new Headers({
+    'Content-Type':'Application/json',
+    'Access-Control-Allow-Origin':'*',
+    'Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE'
+  });
   const requestOptions = new RequestOptions({ headers: _header });
 
   let postData = {
@@ -81,18 +84,52 @@ watting()
 
   this.http.post(apiUrl + "/login", postData, requestOptions)
     .subscribe(data => {
-      console.log(data['_body']);
-      
+      //console.log(data['_body']);
+      this.userSessionId = data['_body'];
+      this.searchpackage();
         if(this.remember)
         {
           //console.log('abc');
           this.storage.set(this.userSave,this.userName);     
           this.storage.set(this.passSave,this.passWord); 
         }
-        this.router.navigate(['trangchu1']);
+        this.router.navigate(['waitting']);
      }, error => {
       console.log(error);
     });
   }
+
+  searchpackage()
+{
+  //  var dataObj = {
+  //   "COMMAND":"GET_PCK_SUB_INFO",
+  //   "isdn":"" + this.phoneNumber
+  // }
+  //   this.http.get("https://congty6.mobifone.vn/rest/care/bangoi?json="+encodeURIComponent(JSON.stringify(dataObj)))
+  //    .subscribe(data => {
+  //      console.log(data['_body']);
+  //   })
+
+  var _header = new Headers({
+    'Content-Type':'Application/json',
+    'Access-Control-Allow-Origin':'*',
+    'Access-Control-Allow-Methods':'POST, GET, OPTIONS, DELETE',
+    "Authorization": this.userSessionId
+  });
+  const requestOptions = new RequestOptions({ headers: _header });
+
+  let postData = '{"COMMAND":"GET_PCK_SUB_INFO","isdn":"903457979"}';
+  this.http.get("https://congty6.mobifone.vn/rest/care/bangoi?json="+encodeURIComponent(JSON.stringify(postData)), requestOptions)
+    .subscribe(data => {
+      //console.log(data['_body']);
+      console.log(data['_body']);
+      
+     }, error => {
+      console.log(error);
+    });
+
+}
+
+
 
 }
